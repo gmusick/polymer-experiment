@@ -1,0 +1,15 @@
+<polymer-element name="points-of-interest-map" attributes="latitude longitude">
+  <template>
+    <link rel="stylesheet" href="/stylesheets/points_of_interest_map.css">
+
+    <core-ajax url="/points-of-interest" auto handleAs="json" on-core-response="{{handleResponse}}"></core-ajax>
+
+    <google-map latitude="{{latitude}}" longitude="{{longitude}}" zoom="12">
+      <template repeat="{{p in points}}">
+        <google-map-marker latitude="{{p.lat}}" longitude="{{p.lng}}" title="{{p.title}}"></google-map-marker>
+      </template>
+    </google-map>
+  </template>
+
+  <script src="/javascripts/points_of_interest_map.js"></script>
+</polymer-element>

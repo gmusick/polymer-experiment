@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="../bower_components/webcomponentsjs/webcomponents.min.js")
+
+    link(rel="import", href="../bower_components/google-map/google-map.html")
+    link(rel="import", href="../bower_components/core-ajax/core-ajax.html")
+    link(rel="import", href="../bower_components/core-drawer-panel/core-drawer-panel.html")
+
+  body(unresolved)
+    block content
